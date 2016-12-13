@@ -13,7 +13,7 @@ public class EchoDialog : IDialog<object>
     protected string name = "";
     protected string lastName = "";
     
-    public void resetValues2()
+    public void resetValues()
     {
         // will reset all values to blank
         int count = 1;

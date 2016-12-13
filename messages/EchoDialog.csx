@@ -76,7 +76,7 @@ public class EchoDialog : IDialog<object>
         {
             //CreateNewOpportunity in Sales Cloud
             this.count = 1;
-            await context.PostAsync("Oportunidad creada");
+            await context.PostAsync("Oportunidad creada correctamente");
         }
         else
         {

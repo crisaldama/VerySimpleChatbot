@@ -12,13 +12,13 @@ namespace Walkthrough
     {
         private SforceService binding;
 
-        [STAThread]
+       /*  [STAThread]
         static void Main(string[] args)
         {
             QuickstartApiSample sample = new QuickstartApiSample();
             sample.run();
         }
-
+        */
         public void run()
         {
             // Make a login call 

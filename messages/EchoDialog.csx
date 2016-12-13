@@ -13,8 +13,9 @@ public class EchoDialog : IDialog<object>
     protected string name = "";
     protected string lastName = "";
     
-    public void resetValues()
+    public void resetValues2()
     {
+        // will reset all values to blank
         int count = 1;
         int age = -1;
         bool isEmployed = false;

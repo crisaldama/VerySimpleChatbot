@@ -91,7 +91,7 @@ public class EchoDialog : IDialog<object>
         {
             //reset all variables
             this.resetValues();
-            await context.PostAsync("Valores reseteados");
+            await context.PostAsync("Valores reseteados ok");
         }
         else
         {

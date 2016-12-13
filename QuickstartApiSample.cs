@@ -5,8 +5,7 @@ using System.Text;
 using System.Web.Services.Protocols;
 using Walkthrough.sforce;
 
-namespace Walkthrough
-{
+
 
     class QuickstartApiSample
     {
@@ -363,4 +362,3 @@ namespace Walkthrough
             Console.ReadLine();
         }
     }
-}

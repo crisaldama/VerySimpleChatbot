@@ -5,18 +5,21 @@ using System.Text;
 using System.Web.Services.Protocols;
 
 
+namespace sforce
+{
+
 
     class QuickstartApiSample
     {
         private SforceService binding;
 
-       /*  [STAThread]
-        static void Main(string[] args)
-        {
-            QuickstartApiSample sample = new QuickstartApiSample();
-            sample.run();
-        }
-        */
+        /*  [STAThread]
+         static void Main(string[] args)
+         {
+             QuickstartApiSample sample = new QuickstartApiSample();
+             sample.run();
+         }
+         */
         public void run()
         {
             // Make a login call 
@@ -361,3 +364,4 @@ using System.Web.Services.Protocols;
             Console.ReadLine();
         }
     }
+}

@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using sforce;
 
 // For more information about this template visit http://aka.ms/azurebots-csharp-basic
 [Serializable]
@@ -76,8 +77,9 @@ public class EchoDialog : IDialog<object>
         {
             //CreateNewOpportunity in Sales Cloud
             this.count = 1;
-            QuickstartApiSample sample = new QuickstartApiSample();
-            sample.run();
+            // QuickstartApiSample sample = new QuickstartApiSample();
+            // sample.run();
+
             await context.PostAsync("Oportunidad creada correctamente");
         }
         else

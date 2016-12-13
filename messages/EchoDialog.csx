@@ -13,7 +13,7 @@ public class EchoDialog : IDialog<object>
     protected string name = "";
     protected string lastName = "";
     
-    public resetValues()
+    public void resetValues()
     {
         int count = 1;
         int age = -1;

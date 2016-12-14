@@ -17,8 +17,7 @@ public class EchoDialog : IDialog<object>
     protected bool isEmployed = false;
     protected string name = "";
     protected string lastName = "";
-
-    protected CloudStorageAccount storageAccount;
+    
     public void resetValues()
     {
         // will reset all values to blank
@@ -84,7 +83,7 @@ public class EchoDialog : IDialog<object>
             // QuickstartApiSample sample = new QuickstartApiSample();
             // sample.run();
             // Retrieve storage account from connection string.
-            this.storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=verysimplebot;AccountKey=g/znXlaP4eYeKI57YZP0IGJlZKb8/1accLODo+wCwxuAHH9daIB0fmAL7IwdUARbtxobH3pXdMKZVY+zsJCukw==");
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=verysimplebot;AccountKey=g/znXlaP4eYeKI57YZP0IGJlZKb8/1accLODo+wCwxuAHH9daIB0fmAL7IwdUARbtxobH3pXdMKZVY+zsJCukw==");
 
             // Create the queue client.
             CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();

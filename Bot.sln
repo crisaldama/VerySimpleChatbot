@@ -29,9 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "messages", "messages", "{F4
 		messages\function.json = messages\function.json
 		messages\project.json = messages\project.json
 		messages\project.lock.json = messages\project.lock.json
-		QuickstartApiSample.cs = QuickstartApiSample.cs
 		messages\run.csx = messages\run.csx
-		SforceService.cs = SforceService.cs
 	EndProjectSection
 EndProject
 Global

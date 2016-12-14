@@ -80,7 +80,6 @@ public class EchoDialog : IDialog<object>
         var confirm = await argument;
         if (confirm)
         {
-            this.resetValues();
             //CreateNewOpportunity in Sales Cloud
             // QuickstartApiSample sample = new QuickstartApiSample();
             // sample.run();

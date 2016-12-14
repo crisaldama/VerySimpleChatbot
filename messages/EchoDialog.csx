@@ -17,7 +17,8 @@ public class EchoDialog : IDialog<object>
     protected bool isEmployed = false;
     protected string name = "";
     protected string lastName = "";
-    
+
+    protected CloudStorageAccount storageAccount;
     public void resetValues()
     {
         // will reset all values to blank
@@ -79,10 +80,23 @@ public class EchoDialog : IDialog<object>
         var confirm = await argument;
         if (confirm)
         {
+            this.resetValues();
             //CreateNewOpportunity in Sales Cloud
-            this.count = 1;
             // QuickstartApiSample sample = new QuickstartApiSample();
             // sample.run();
+            // Retrieve storage account from connection string.
+            this.storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=verysimplebot;AccountKey=g/znXlaP4eYeKI57YZP0IGJlZKb8/1accLODo+wCwxuAHH9daIB0fmAL7IwdUARbtxobH3pXdMKZVY+zsJCukw==");
+
+            // Create the queue client.
+            CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+
+            // Retrieve a reference to a queue.
+            CloudQueue queue = queueClient.GetQueueReference("myqueue");
+
+            // Create a message and add it to the queue.
+            CloudQueueMessage message = new CloudQueueMessage("Create Opp");
+            queue.AddMessage(message);
+
 
             await context.PostAsync("Oportunidad creada correctamente");
         }

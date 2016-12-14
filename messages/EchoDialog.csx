@@ -2,6 +2,10 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using Microsoft.Azure; // Namespace for CloudConfigurationManager
+using Microsoft.WindowsAzure.Storage; // Namespace for CloudStorageAccount
+using Microsoft.WindowsAzure.Storage.Queue; // Namespace for Queue storage types
+
 //using sforce;
 
 // For more information about this template visit http://aka.ms/azurebots-csharp-basic

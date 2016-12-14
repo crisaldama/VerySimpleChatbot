@@ -14,6 +14,20 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 {
     log.Info($"Webhook was triggered!");
 
+    log.Info($"Initializing Communication Queue");
+    // Retrieve storage account from connection string.
+    CloudStorageAccount storageAccount = "DefaultEndpointsProtocol=https;AccountName=verysimplebot;AccountKey=g/znXlaP4eYeKI57YZP0IGJlZKb8/1accLODo+wCwxuAHH9daIB0fmAL7IwdUARbtxobH3pXdMKZVY+zsJCukw==";
+
+    // Create the queue client.
+    CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+
+    // Retrieve a reference to a container.
+    CloudQueue queue = queueClient.GetQueueReference("myqueue");
+
+    // Create the queue if it doesn't already exist
+    queue.CreateIfNotExists();
+
+
     // Initialize the azure bot
     using (BotService.Initialize())
     {

@@ -19,7 +19,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 
     log.Info($"Initializing Communication Queue");
     // Retrieve storage account from connection string.
-    CloudStorageAccount storageAccount = "DefaultEndpointsProtocol=https;AccountName=verysimplebot;AccountKey=g/znXlaP4eYeKI57YZP0IGJlZKb8/1accLODo+wCwxuAHH9daIB0fmAL7IwdUARbtxobH3pXdMKZVY+zsJCukw==";
+    CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=verysimplebot;AccountKey=g/znXlaP4eYeKI57YZP0IGJlZKb8/1accLODo+wCwxuAHH9daIB0fmAL7IwdUARbtxobH3pXdMKZVY+zsJCukw==");
 
     // Create the queue client.
     CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();

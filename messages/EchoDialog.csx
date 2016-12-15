@@ -63,7 +63,7 @@ public class EchoDialog : IDialog<object>
                PromptDialog.Confirm(
                 context,
                 AfterOKAsync,
-                "Por favor valide sus datos y te daremos una respuesta en menos de 24 horas",
+                "Por favor valida que tus datos son correctos y te daremos una respuesta en menos de 24 horas\nTest",
                 "¡No me he enterado!",
                 promptStyle: PromptStyle.Auto);
         }
@@ -81,6 +81,7 @@ public class EchoDialog : IDialog<object>
                     break;
                 case 5: await context.PostAsync($"En principio la operación parece viable. ¿Quieres que iniciémos los trámites?");
                     break;
+                default: 
 
             }
 

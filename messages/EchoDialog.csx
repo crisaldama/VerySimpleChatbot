@@ -57,7 +57,7 @@ public class EchoDialog : IDialog<object>
                PromptDialog.Confirm(
                 context,
                 AfterOKAsync,
-                "Por favor valida que tus datos son correctos y te daremos una respuesta en menos de 24 horas<br>Comprar coche nuevo",
+                "Por favor Juliua, confirma que deseas comprar un coche nuevo y que solicitas 5.000€ a un plazo de 3 años y te daremos una respuesta en menos de 24 horas ",
                 "¡No me he enterado!",
                 promptStyle: PromptStyle.Auto);
         }

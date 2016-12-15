@@ -58,7 +58,7 @@ public class EchoDialog : IDialog<object>
                 "¡No me he enterado!",
                 promptStyle: PromptStyle.Auto);
         }
-        else if (message.Text == "OK")
+        else if (message.Text == "OK" || message.Text == "De acuerdo" || message.Text == "vale" )
         {
                PromptDialog.Confirm(
                 context,
@@ -81,7 +81,8 @@ public class EchoDialog : IDialog<object>
                     break;
                 case 5: await context.PostAsync($"En principio la operación parece viable. ¿Quieres que iniciémos los trámites?");
                     break;
-                default: 
+                default:
+                    break;
 
             }
 
@@ -115,7 +116,7 @@ public class EchoDialog : IDialog<object>
         }
         else
         {
-            await context.PostAsync("No hay problema si no está seguro");
+            await context.PostAsync("No hay problema si no se está seguro. ¿Te puedo ayudar en algo más?");
         }
         context.Wait(MessageReceivedAsync);
     }

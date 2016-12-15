@@ -58,18 +58,32 @@ public class EchoDialog : IDialog<object>
                 "¡No me he enterado!",
                 promptStyle: PromptStyle.Auto);
         }
-        else if (message.Text == "De acuerdo")
+        else if (message.Text == "OK")
         {
                PromptDialog.Confirm(
                 context,
                 AfterOKAsync,
-                "Por favor confirme que está de acuerdo en que un especialista contacte con usted por teléfono",
+                "Por favor valide sus datos y te daremos una respuesta en menos de 24 horas",
                 "¡No me he enterado!",
                 promptStyle: PromptStyle.Auto);
         }
         else
         {
-            await context.PostAsync($"{this.count++}: You said {message.Text}");
+            this.count++;
+
+            switch(count)
+            {
+                case 2: await context.PostAsync($"Para pedir un crédito puedes consultar nuestra web en www.bancosabadell.com, pero si quieres contestar a unas preguntas yo puedo ayudarte más rápido. ¿Para qué es el crédito y qué cantidad necesitas?");
+                    break;
+                case 3: await context.PostAsync($"Ya veo, necesitas 5.000€ para un coche nuevo. ¿Es cierto que llevas ya 2 años trabajando?");
+                    break;
+                case 4: await context.PostAsync($"¿Te parece bien un crédito a 3 años?");
+                    break;
+                case 5: await context.PostAsync($"En principio la operación parece viable. ¿Quieres que iniciémos los trámites?");
+                    break;
+
+            }
+
             context.Wait(MessageReceivedAsync);
         }
     }

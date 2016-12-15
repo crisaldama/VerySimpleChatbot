@@ -62,7 +62,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
                         var newMembers = update.MembersAdded?.Where(t => t.Id != activity.Recipient.Id);
                         foreach (var newMember in newMembers)
                         {
-                            reply.Text = "Hola Julia, soy sabbot, el robot del Banco Sabadell. Estoy aquí para ayudarte. ¿Qué deseas?";
+                            reply.Text = "Hola Julia, soy Sabbot, el robot del Banco Sabadell. Estoy aqu&iacute; para ayudarte. ¿Qu&eacute; deseas?";
                             if (!string.IsNullOrEmpty(newMember.Name))
                             {
                                 reply.Text += $" {newMember.Name}";

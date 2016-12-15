@@ -106,7 +106,7 @@ public class EchoDialog : IDialog<object>
             queue.AddMessage(message);
 
 
-            await context.PostAsync("Oportunidad creada correctamente");
+            await context.PostAsync("Gracias Julia, hasta otro día");
         }
         else
         {

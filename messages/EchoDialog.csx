@@ -13,19 +13,13 @@ using Microsoft.WindowsAzure.Storage.Queue; // Namespace for Queue storage types
 public class EchoDialog : IDialog<object>
 {
     protected int count = 1;
-    protected int age = -1;
-    protected bool isEmployed = false;
-    protected string name = "";
-    protected string lastName = "";
+  
     
     public void resetValues()
     {
         // will reset all values to blank
         count = 1;
-        age = -1;
-        isEmployed = false;
-        name = "";
-        lastName = ""; 
+       
     }
 
     public Task StartAsync(IDialogContext context)

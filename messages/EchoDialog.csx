@@ -21,11 +21,11 @@ public class EchoDialog : IDialog<object>
     public void resetValues()
     {
         // will reset all values to blank
-        int count = 1;
-        int age = -1;
-        bool isEmployed = false;
-        string name = "";
-        string lastName = ""; 
+        count = 1;
+        age = -1;
+        isEmployed = false;
+        name = "";
+        lastName = ""; 
     }
 
     public Task StartAsync(IDialogContext context)

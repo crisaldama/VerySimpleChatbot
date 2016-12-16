@@ -57,7 +57,7 @@ public class EchoDialog : IDialog<object>
                PromptDialog.Confirm(
                 context,
                 AfterOKAsync,
-                "Por favor Julia, confirma que deseas comprar un coche nuevo y que solicitas 5.000€ a un plazo de 3 años y te daremos una respuesta en menos de 24 horas. ¿Te parece bien? ",
+                "Por favor Julia, confirma que tienes interés en adquirir una nueva máquina de macerar masa y que solicitas 5.000€ a un plazo de 3 años y te daremos una respuesta en menos de 24 horas. ¿Te parece bien? ",
                 "¡No me he enterado!",
                 promptStyle: PromptStyle.Auto);
         }
@@ -69,9 +69,9 @@ public class EchoDialog : IDialog<object>
             {
                 case 2: await context.PostAsync($"Para pedir un crédito puedes consultar nuestra web en www.bancosabadell.com, pero si quieres contestar a unas preguntas yo puedo ayudarte más rápido. ¿Para qué es el crédito y qué cantidad necesitas?");
                     break;
-                case 3: await context.PostAsync($"Ya veo, necesitas 5.000€ para un coche nuevo. ¿Es cierto que llevas ya 2 años trabajando?");
+                case 3: await context.PostAsync($"Ya veo, necesitas 5.000€ para una nueva máquina de macerar. ¿Es cierto que tu empresa ya lleva 2 años en el mercado?");
                     break;
-                case 4: await context.PostAsync($"¿Te parece bien un crédito a 3 años?");
+                case 4: await context.PostAsync($"¿Te parece bien un crédito con pago a 3 años?");
                     break;
                 case 5: await context.PostAsync($"En principio la operación parece viable. ¿Quieres que iniciémos los trámites?");
                     break;
